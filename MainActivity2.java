@@ -1,0 +1,55 @@
+package com.example.quiz_app;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
+
+public class MainActivity2 extends AppCompatActivity {
+
+    Button truebtn,falsebtn,next,prev;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main2);
+        next = findViewById(R.id.next_button);
+        prev = findViewById(R.id.prev_button);
+        truebtn = findViewById(R.id.true_button);
+        falsebtn = findViewById(R.id.false_button);
+        prev.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity2.this,MainActivity.class);
+                startActivity(intent);
+
+            }
+        });
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity2.this,MainActivity3.class);
+                startActivity(intent);
+
+            }
+        });
+
+
+        truebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity2.this, "Answer is Correct..", Toast.LENGTH_SHORT).show();
+            }
+        });
+        falsebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity2.this, "Answer is Incorrect..", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    }

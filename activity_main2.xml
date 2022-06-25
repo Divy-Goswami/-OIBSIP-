@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Using linear layout with vertical orientation and center gravity -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F7F4"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="150px"
+        android:text="QUIZ APP"
+        android:textColor="#DA1919"
+        android:textColorHighlight="#5A3333"
+        android:textSize="34sp" />
+
+    <!--ImageView used for showing pictures along with questions-->
+    <ImageView
+        android:id="@+id/myimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!--TextView used for showing questions on screen-->
+
+
+    <!--Using another LinearLayout for showing buttons
+        in horizontal orientation-->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2. Goa is famous for not producing coconut."
+        android:textAlignment="center"
+        android:textColor="#0C0C0C"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100px">
+
+        <!--TrueButton-->
+        <Button
+            android:id="@+id/true_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="#F6F5F5"
+            android:text="@string/true_text"
+            android:textColor="#0B0A0A"
+            android:textSize="20sp" />
+
+        <!--FalseButton-->
+        <Button
+            android:id="@+id/false_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:backgroundTint="#F6F5F5"
+            android:text="@string/false_text"
+            android:textColor="#101010"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200px">
+
+
+        <Button
+            android:id="@+id/prev_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="150px"
+            android:layout_weight="1"
+            android:backgroundTint="#090909"
+            android:text="previous"
+            android:textColor="#E80606"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/next_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#090909"
+            android:text="next"
+            android:textColor="#E30505"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:ignore="InvalidId" />
+
+    </LinearLayout>
+</LinearLayout>
